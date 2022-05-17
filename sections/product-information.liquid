@@ -1,0 +1,300 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+.section-{{ section.id }}-padding .product-image img{width:100%;}
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+
+
+<style>
+ .swiper {
+  width: 100%;
+}
+  .product-icons{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .products-button .button{margin-bottom:16px;}
+  .products-button .button .icon{position:absolute; left:30px; width:22px;}
+  @media(max-width:767px){
+  .section-{{ section.id }}-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+    .product-information-new .product-right h2{
+    font-size:26px;
+    line-height:30px;
+  }
+   .brand-icons-section h2{
+    font-size:20px !important;
+    line-height:26px !important;
+  }
+    .brand-icons-section h2 sup {
+    font-size: 18px!important;
+}
+  }
+  
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  class="isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+
+<div class=" grid grid--1-col grid--2-col-tablet">
+   
+   <div class="grid__item product-left">
+    
+     <div class="video">
+      <iframe id="videoshow" width="100%" height="300" style="display:none" src="https://www.youtube.com/embed/{{product.metafields.my_fields.youtube_video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    	<img id="imgshow" style="display:none;width:100%" />
+     </div>
+   
+     <div class="product-thumbnail-gallery">
+
+          <div class="swiper">
+  <div class="swiper-wrapper">
+    
+    {%for media in product.media%}
+    {%if media.media_type=="image"%}
+     <div class="swiper-slide">
+       <img src="{{media.src|img_url:'200x400'}}" onclick="imgvideoshow('image','{{media.src|img_url:'original'}}')"/>
+    </div>
+   {%else%}
+     <div class="swiper-slide">
+    
+       <div class="swiper-slide" >
+         <img src="{{media.preview_image.src|img_url:'200x400'}}" onclick="imgvideoshow('video','{{media.external_id}}')"/>
+         
+         {%render 'icon-play'%}</div>
+       
+    </div>
+    {%endif%}
+   
+    {%endfor%}
+    
+  </div>
+     
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-scrollbar"></div>
+</div>
+       
+       
+       
+<!--        <ul>
+       {%for img in product.images%}
+       {%if forloop.index<7%}
+       <li><img src="{{img|img_url:'120x120'}}"/></li>
+       {%endif%}
+       {%endfor%}
+      </ul> -->
+     </div>
+   
+     
+     <div class="product-page-icons">
+       <ul class="product-icons">
+     {%for block in section.blocks%}
+       <li><img src="{{block.settings.image|img_url:'120x120'}}"/></li>
+     {%endfor%}
+       </ul>
+     </div>          
+   </div>         
+   
+    <div class="grid__item product-right">     
+      <h2>Taking acoustic design to new heights</h2>
+      <div class="p-decription">
+      {{product.metafields.my_fields.design}}
+      </div>
+      
+      
+      <div class="featire-benifit"> 
+        <h2>Features and benefits</h2>
+         <div class="feature-benifits">
+      
+      {{product.metafields.my_fields.features_and_benefits}}
+      </div>
+      </div>
+                  
+      <div class="products-button">
+        <a class="button button--blackbg" href="#">{% render 'sendme'%}Send me samples by post</a>
+       	<a class="button button--primary-border" target="_blank" href="{{product.metafields.my_fields.download_digital_pack.value.url}}">{% render 'download-icon'%}Download Digital Pack</a>
+      </div>
+      
+      
+       <div class="Key-Specifications">
+        <h2>Key Specifications</h2>
+         <div class="key-specification">
+      {{product.metafields.my_fields.key_specifications}}
+           <a class="button button--primary" target="_blank" href=""><span>Read More</span></a>   
+           
+      </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+ 
+
+  
+</div>
+
+
+  
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+  console.log(product.media[0]);
+     if(product.media[0].media_type=="image"){
+      document.getElementById("imgshow").src=product.media[0].src;
+      document.getElementById("imgshow").style.display="block";
+      document.getElementById("videoshow").style.display="none";
+    }
+    else{
+    
+      document.getElementById("videoshow").src=`https://www.youtube.com/embed/${product.media[0].external_id}?autoplay=1"`;
+      document.getElementById("videoshow").style.display="block";
+      document.getElementById("imgshow").style.display="none";
+    } 
+    
+    
+});
+  
+  
+  function imgvideoshow(mediatype,datasrc){
+    if(mediatype=="image"){
+      document.getElementById("imgshow").src=datasrc;
+      document.getElementById("imgshow").style.display="block";
+      document.getElementById("videoshow").style.display="none";
+    }
+    else{
+    
+      document.getElementById("videoshow").src=`https://www.youtube.com/embed/${datasrc}?autoplay=1"`;
+      document.getElementById("videoshow").style.display="block";
+      document.getElementById("imgshow").style.display="none";
+    } 
+  
+  }
+const mySwiper = new Swiper('.swiper', {
+  
+  loop: true,
+
+            slidesPerView: 3,
+            spaceBetween: 30,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    clickable:true
+  },
+});
+//   var product={{product|json}}
+  
+//   mySwiper.on('slideChange', function (e) {
+//     console.log(product.media[mySwiper.activeIndex].src);
+//     console.log('*** mySwiper.activeIndex', mySwiper.activeIndex);
+// });
+</script>
+
+
+
+
+{% schema %} 
+{
+"name": "Product Information New",
+"class": "product-information-new",
+"settings": [
+ {
+  "type": "text",
+  "id": "title",
+  "label": "Section Heading"
+},
+{
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": false
+    },
+{
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+
+
+  ],
+
+ "blocks": [
+     {
+       "name": "icon",
+       "type": "icon",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Select Image"
+         }
+       ]
+     }
+   ],
+
+"presets": [
+{
+"name": "Product Information New",
+"category": "Custom Layout"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

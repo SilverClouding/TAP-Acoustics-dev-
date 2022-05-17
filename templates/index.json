@@ -1,0 +1,330 @@
+{
+  "sections": {
+    "165157891418c3498f": {
+      "type": "image-with-text",
+      "blocks": {
+        "16515789145c966167-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "MAKING OF TAP<sup>®<\/sup>",
+            "heading_size": "h0"
+          }
+        },
+        "16515789145c966167-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We help architects sculpt sound out of space, with bespoke, acoustic solutions.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "16515789145c966167-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16515789145c966167-0",
+        "16515789145c966167-1",
+        "16515789145c966167-2"
+      ],
+      "settings": {
+        "full_width": true,
+        "image": "shopify:\/\/shop_images\/rectangle_11.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0
+      }
+    },
+    "165218321784f9cdd9": {
+      "type": "three-column-gallery",
+      "settings": {
+        "img1": "shopify:\/\/shop_images\/innovative.jpg",
+        "head1": "Innovative Baffles",
+        "paragraph1": "Pushing the boundaries of acoustic design",
+        "img2": "shopify:\/\/shop_images\/grooves.jpg",
+        "head2": "Grooves",
+        "paragraph2": "Pushing the boundaries of acoustic design",
+        "img3": "shopify:\/\/shop_images\/furniture.jpg",
+        "head3": "Furniture Inspiration",
+        "paragraph3": "Pushing the boundaries of acoustic design",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 2,
+        "margin_left": 30,
+        "margin_right": 30
+      }
+    },
+    "1651586637a56c1dc5": {
+      "type": "brand-icons",
+      "blocks": {
+        "638bff14-4cbe-49ac-84f5-fbae2d058554": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-top.png"
+          }
+        },
+        "41788735-e670-4596-88e9-6ce74c8c54fe": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pricewaterhousecoopers_lo.jpg"
+          }
+        },
+        "220d4701-b44d-4bd6-8e7b-9ad249a09cd5": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/layer_20.png"
+          }
+        },
+        "2c06f361-fddd-4a96-8198-6660bf59378f": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/layer_21.png"
+          }
+        },
+        "b97c51a4-d091-4669-8cfd-f3359158e419": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/british-retail-consortium.png"
+          }
+        },
+        "fa5a89f4-2ae3-4887-b526-11dd8ae5b80e": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/footer-logo.png"
+          }
+        },
+        "f843b919-5b5a-473d-a0a3-7f778e039028": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/layer_23.jpg"
+          }
+        },
+        "d7bdd535-80c0-472d-b4f9-cb09ca91e144": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/layer_22.png"
+          }
+        },
+        "6056c3e5-2b94-461c-9f59-2cf10b459e16": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ibm-logo-ibm-logos-downlo.png"
+          }
+        },
+        "8780d863-04ab-4a7a-887e-8da0786d68b0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dtc-logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "638bff14-4cbe-49ac-84f5-fbae2d058554",
+        "41788735-e670-4596-88e9-6ce74c8c54fe",
+        "220d4701-b44d-4bd6-8e7b-9ad249a09cd5",
+        "2c06f361-fddd-4a96-8198-6660bf59378f",
+        "b97c51a4-d091-4669-8cfd-f3359158e419",
+        "fa5a89f4-2ae3-4887-b526-11dd8ae5b80e",
+        "f843b919-5b5a-473d-a0a3-7f778e039028",
+        "d7bdd535-80c0-472d-b4f9-cb09ca91e144",
+        "6056c3e5-2b94-461c-9f59-2cf10b459e16",
+        "8780d863-04ab-4a7a-887e-8da0786d68b0"
+      ],
+      "settings": {
+        "title": "Brand that trust us",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "1651645730481e185b": {
+      "type": "image-banner",
+      "blocks": {
+        "16516457304bd63e03-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "TAP<sup>®<\/sup> Sustainability Work",
+            "heading_color": "#202020",
+            "heading_size": "h1"
+          }
+        },
+        "16516457304bd63e03-1": {
+          "type": "text",
+          "settings": {
+            "text": "We aim for climate neutrality and hope to inspire  and challenge our friends and colleagues in the  design sector to do the same",
+            "b_text_color": "#5b5b5b",
+            "text_style": "body"
+          }
+        },
+        "16516457304bd63e03-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Our Work",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16516457304bd63e03-0",
+        "16516457304bd63e03-1",
+        "16516457304bd63e03-2"
+      ],
+      "settings": {
+        "margin_left": 30,
+        "margin_right": 30,
+        "image": "shopify:\/\/shop_images\/rectangle_26.jpg",
+        "banner_shadow": false,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "165164595540ffb166": {
+      "type": "image-with-text",
+      "blocks": {
+        "1651645955c247131e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Inspiration Library",
+            "heading_size": "h1"
+          }
+        },
+        "1651645955c247131e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>we’ve gathered a selection of soundproofing inspirations and images to spark your imagination! <\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "1651645955c247131e-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "View All",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "1651645955c247131e-0",
+        "1651645955c247131e-1",
+        "1651645955c247131e-2"
+      ],
+      "settings": {
+        "full_width": true,
+        "image": "shopify:\/\/shop_images\/rectangle_22.jpg",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "margin_left": 30,
+        "margin_right": 30
+      }
+    },
+    "1651646081b6053113": {
+      "type": "multicolumn",
+      "blocks": {
+        "1651646081adc1d312-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rectangle_23.jpg",
+            "title": "Infrastructure",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text": "<p>TAP is a global market leader in <br\/>designed wood wool acoustic.<\/p>",
+            "text_color": "#ffffff",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1651646081adc1d312-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rectangle_23_copy.png",
+            "title": "R&D",
+            "font_size": "32",
+            "head_color": "#000000",
+            "text": "<p>TAP is a global market leader in <br\/>designed wood wool acoustic. <\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1651646081adc1d312-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rectangle_23_copy_2.jpg",
+            "title": "Case Study",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text": "<p>Our tools makes it easy for any <br\/>architect and interior designer<\/p>",
+            "text_color": "#ffffff",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1651646081adc1d312-0",
+        "1651646081adc1d312-1",
+        "1651646081adc1d312-2"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "overlap_text": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "margin_left": 15,
+        "margin_right": 15
+      }
+    }
+  },
+  "order": [
+    "165157891418c3498f",
+    "165218321784f9cdd9",
+    "1651586637a56c1dc5",
+    "1651645730481e185b",
+    "165164595540ffb166",
+    "1651646081b6053113"
+  ]
+}

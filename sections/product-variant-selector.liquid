@@ -1,0 +1,370 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+
+
+<style>
+  .brand-icons-section .feature-img img{width:100%;}
+  .brand-icons-section .variant{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .brand-icons-section h2{
+    font-size:32px;
+    text-align:center;
+    color:#202020;
+    font-weight:600;
+    text-transform:uppercase;
+  }
+  .brand-icons-section h2 sup{
+  font-size:22px;
+  font-family: 'RM Neue TRIAL';
+      font-weight: 400;
+  }
+  .brand-icons-section .icon-shape{
+    width: 100%;
+  }
+  .brand-icons-section .icon-color{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+  }
+  .brand-icons-section .color-img-download{
+    height:130px;
+    width:130px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+  }
+  .brand-icons-section .swatch_active{
+    border:1px solid #222;
+    padding:2px;
+  }
+  .brand-icons-section .varient-texture.variant-ProductOptionDrop .swatch_active{
+    border:1px solid #202020;
+  }
+  .brand-icons-section .brand-icons-section img {
+    max-width: 100%;
+  }
+  .brand-icons-section .varient-texture li{
+    border:1px solid #f2f2f2;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    width:47px;
+    height:47px;
+    overflow: hidden;
+  }
+  .brand-icons-section .varient-texture li img{
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+  }
+  .varient-texture.variant-ProductOptionDrop li{
+    margin:0 10px 10px 0;
+  }
+  .brand-icons-section .swatch-Color{
+    width:230px;
+  }
+  .brand-icons-section .swatch-Style.pattern-style{width:172px;}
+  .brand-icons-section .swatch-Style-img{
+    width: 130px;
+    height:130px;
+    margin-right: 30px;
+    text-align:center;
+  }
+  .brand-icons-section .swatch-Style-img img{width:100%;}
+  .brand-icons-section .swatch-circle,
+   .brand-icons-section .pattern-circle{
+    position: relative;
+    height:130px;
+  }
+  .brand-icons-section .swatch-Color-img{
+    overflow: hidden;
+    margin: 0 20px;
+    width: 140px;
+    text-align:center;
+  }
+  .brand-icons-section .swatch-Color-img a,
+  .brand-icons-section .swatch-Style-img a{
+    position: absolute;
+    border-color: #fff;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .brand-icons-section .swatch-Color-img:hover a,
+  .brand-icons-section .swatch-Style-img:hover a{opacity:1;}
+  .all-variant{
+    margin:65px auto;
+    width:760px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .brand-icons-section .v-name{font-size:20px; line-height:30px; color:#202020; font-weight:400; margin-top:10px;}
+  .brand-icons-section .color-pallate-left,
+  .brand-icons-section .color-swatch-right {
+  display:flex;
+  }
+  @media(max-width:767px){
+  .brand-icons-section .color-img-download {
+    height: 90px;
+    width: 90px;
+  }
+  .brand-icons-section .swatch-circle{
+    height:90px;
+  }
+    .brand-icons-section .pattern-circle{
+    height:100px;
+  }
+  .brand-icons-section .v-name{
+  font-size:16px;
+  }
+  .brand-icons-section .swatch-Color-img{
+  margin:0 40px 0 0px;
+     width:90px;
+    order:1;
+  }
+  .brand-icons-section .swatch-Color {
+    width: 185px;
+    order:2;
+}
+.brand-icons-section .swatch-Style-img img {
+    width: 80%;
+}
+    .all-variant{
+    margin:30px 0;
+    }
+  }
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+</style>
+
+<div  class="isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+
+<div class="brand-icons-section">
+  <div class="feature-img"><img src="{{product.variants[0].featured_image.src |img_url:'original'}}" id="mainimg"/></div>
+  <h2>{{product.metafields.my_fields.color_pallate_heading}}</h2>
+  <div class="all-variant">
+{%- for option in product.options_with_values -%}
+  {% if option.name=='Color' %}
+     <div class="color-pallate-left">
+    <p id="option1" hidden>{{option.values.size}}</p>
+   
+    <div class="swatch-{{option.name}}">
+  <ul class="variant variant-{{option}}">
+  {%- for value in option.values -%}
+   <li  onclick="colorClick('https://cdn.shopify.com/s/files/1/0641/2075/0331/files/{{value|handle}}.jpg',{{forloop.index}})" class=" ">
+     <img id="color{{forloop.index}}"src="https://cdn.shopify.com/s/files/1/0641/2075/0331/files/{{value|handle}}.jpg" class="icon-color {%if forloop.index==1%}swatch_active{%endif%}"/>
+    </li>
+  {%endfor%}
+  </ul>    
+  </div>
+    <div class="swatch-{{option.name}}-img">
+     <div class="swatch-circle">
+      <img src="https://cdn.shopify.com/s/files/1/0641/2075/0331/files/stonewash.jpg" class="color-img-download" id="downloadColor"/>
+        <a id="colordownlink" target="_blank" href="https://cdn.shopify.com/s/files/1/0641/2075/0331/files/stonewash.jpg">{%render 'icon-download'%}</a>
+       </div>
+       <p class="v-name" id="color_name"></p>
+      </div>
+    </div>
+  {%endif%}
+  {% if option.name=='Style' %}
+    <div class="color-swatch-right">
+     <div class="swatch-{{option.name}}-img pattern">
+      <div class="pattern-circle">
+       <img src="https://cdn.shopify.com/s/files/1/0641/2075/0331/files/s1.png" class="style-img-download" id="downloadStyle"/>
+       <a id="styledownlink" target="_blank" href="https://cdn.shopify.com/s/files/1/0641/2075/0331/files/s1.png">{%render 'icon-download'%}</a>
+       </div>
+       <p class="v-name" id="shape_name"></p>
+      </div> 
+    
+  <div class="swatch-{{option.name}} pattern-style">
+  
+     <p id="option2" hidden>{{option.values.size}}</p>
+  <ul class="variant varient-texture variant-{{option}}">
+  {%- for value in option.values -%}
+  <li onclick="shapeClick('https://cdn.shopify.com/s/files/1/0641/2075/0331/files/{{value|handle}}.png',{{forloop.index}})" >
+    
+    <img  id="style{{forloop.index}}" src="https://cdn.shopify.com/s/files/1/0641/2075/0331/files/{{value|handle}}.png" class="icon-shape  {%if forloop.index==1%}swatch_active{%endif%}"/>
+    
+    </li>
+  {%endfor%}
+  </ul>
+   </div>
+  
+    </div>
+  {%endif%}
+  
+  
+  {%endfor%}
+</div>
+  </div>
+
+  
+  
+  
+</div>
+
+
+  <script>
+    var product=({{product|json}})
+    
+    
+    document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("color_name").innerHTML=product.variants[0].option1;
+      document.getElementById("shape_name").innerHTML=product.variants[0].option2;
+});
+    
+    
+    
+    
+    
+    
+    var lastColor=1;
+    var lastStyle=1;
+    function colorClick(img,id){
+      document.getElementById("downloadColor").src = img;
+      document.getElementById(`color${lastColor}`).classList.remove("swatch_active");
+      document.getElementById(`color${id}`).classList.add("swatch_active");
+      document.getElementById("colordownlink").href = img;
+      lastColor=id;
+      changeMainImage();
+    }
+     function shapeClick(img,id){
+       
+       document.getElementById("downloadStyle").src = img;
+      document.getElementById(`style${lastStyle}`).classList.remove("swatch_active");
+      document.getElementById(`style${id}`).classList.add("swatch_active");
+       document.getElementById("styledownlink").href = img;
+      lastStyle=id;
+       changeMainImage();
+       
+    
+    }
+    
+    
+    
+    function changeMainImage(){
+      
+    let option1 = document.getElementById("option1").innerHTML;
+    let option2 = document.getElementById("option2").innerHTML;
+    
+      
+//       console.log(lastColor);
+//       console.log(lastStyle); 
+      
+//       console.log(option2);
+//        console.log(option1);
+      
+      
+     let active=((lastColor-1)*option2)+lastStyle-1;
+      
+  
+      document.getElementById("shape_name").innerHTML = product.variants[active].option2;
+      document.getElementById("color_name").innerHTML = product.variants[active].option1;
+     document.getElementById("mainimg").src = product.variants[active].featured_image.src;
+    }
+    
+    
+
+
+
+</script>
+
+
+{% schema %} 
+{
+"name": "Product Variant",
+"settings": [
+ {
+  "type": "text",
+  "id": "title",
+  "label": "Section Heading"
+},
+{
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": false
+    },
+{
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+
+
+  ],
+
+"presets": [
+{
+"name": "Product Variant",
+"category": "Custom Layout"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,386 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1651838097308330e3": {
+      "type": "rich-text",
+      "blocks": {
+        "165183809776023594-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sustainability",
+            "heading_size": "h1"
+          }
+        },
+        "2b520250-7293-4e7b-8aee-6ee4301ab862": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Since our inception and well before it became a global necessity, sustainable design and manufacturing has been part of our DNA. It’s who we are, not simply what we do. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165183809776023594-0",
+        "2b520250-7293-4e7b-8aee-6ee4301ab862"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "desktop_content_alignment": "left",
+        "custom_class": "rich-text-gap",
+        "padding_top": 106,
+        "padding_bottom": 106
+      }
+    },
+    "1651838168b9f4e9aa": {
+      "type": "image-banner",
+      "settings": {
+        "margin_left": 0,
+        "margin_right": 0,
+        "image": "shopify:\/\/shop_images\/banner_2.jpg",
+        "banner_shadow": false,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "165183823610ce9cb4": {
+      "type": "rich-text",
+      "blocks": {
+        "16518382362277ab9a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TAP® has pioneered the production of high-performance acoustic finishes and textiles in India, using recycled materials, predominantly post-consumer PET plastic, making a direct contribution towards achieving a circular economy. <br\/><br\/>With 275 million tonnes of plastic waste generated globally each year, TAP® is proving that PET waste can be successfully upcycled into a value-added resource that meets growing market demand for acoustic finishes. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16518382362277ab9a-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "desktop_content_alignment": "left",
+        "custom_class": "",
+        "padding_top": 106,
+        "padding_bottom": 106
+      }
+    },
+    "1651838505173f35d6": {
+      "type": "multicolumn",
+      "blocks": {
+        "1651838505f42fe6ae-0": {
+          "type": "column",
+          "settings": {
+            "block_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/plastic_bottle_recycling.png",
+            "sub_title": "We have recycled",
+            "title": "1105 TONNES",
+            "font_weight": "600",
+            "font_size": "24",
+            "head_color": "#000000",
+            "text": "<p>of PET plastic to make our acoustic products.<\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1651838505f42fe6ae-1": {
+          "type": "column",
+          "settings": {
+            "block_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/plastic_bottle_slate_grey.png",
+            "sub_title": "We have diverted",
+            "title": "275 MILLION",
+            "font_weight": "600",
+            "font_size": "24",
+            "head_color": "#000000",
+            "text": "<p>600ml plastic drink bottles, from landfill and waterways.<\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1651838505f42fe6ae-2": {
+          "type": "column",
+          "settings": {
+            "block_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/c02_clouds_slate_grey.png",
+            "sub_title": "Saved",
+            "title": "6496 TONNES",
+            "font_weight": "600",
+            "font_size": "24",
+            "head_color": "#000000",
+            "text": "<p>600ml plastic drink bottles, from landfill and waterways.<\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "0e17a080-c5cb-48ee-9890-8e1d3d20ec90": {
+          "type": "column",
+          "settings": {
+            "block_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/balloons_slate_grey.png",
+            "sub_title": "Prevented",
+            "title": "130 MILLION",
+            "font_weight": "600",
+            "font_size": "24",
+            "head_color": "#000000",
+            "text": "<p><strong> <\/strong>black balloons, filled with carbon pollution, from warming our planet.<\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1651838505f42fe6ae-0",
+        "1651838505f42fe6ae-1",
+        "1651838505f42fe6ae-2",
+        "0e17a080-c5cb-48ee-9890-8e1d3d20ec90"
+      ],
+      "settings": {
+        "full_width": false,
+        "title": "Here’s what we have achieved since 2006.....",
+        "heading_color": "#ffffff",
+        "back_image": "shopify:\/\/shop_images\/layer_78_b12b8197-c270-4483-a6c1-57ff68ef9d7f.png",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "overlap_text": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 106,
+        "padding_bottom": 106,
+        "block_padding_top": 25,
+        "block_padding_bottom": 32,
+        "margin_left": 0,
+        "margin_right": 0
+      }
+    },
+    "1652451221fc7f8a42": {
+      "type": "rich-text",
+      "blocks": {
+        "165245122178ec0e71-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whilst we are proud of our sustainability journey to date, we remain unequivocally committed to further reducing the environmental and social impacts of our products and operations<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165245122178ec0e71-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "desktop_content_alignment": "left",
+        "custom_class": "",
+        "padding_top": 106,
+        "padding_bottom": 106
+      }
+    },
+    "1651840720538c2de2": {
+      "type": "image-background-and-text",
+      "settings": {
+        "bg_color": "#000000",
+        "texture_img": "shopify:\/\/shop_images\/texture.jpg",
+        "text": "By 2030 we will reduce our greenhouse gas emissions by 50% whilst maintaining a positive social impact.",
+        "text_color": "#ffffff",
+        "font_size": "32",
+        "text_alignment": "center",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_style_secondary_1": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "inner_padding_top": 60,
+        "inner_padding_bottom": 60
+      }
+    },
+    "16518399532d4635c5": {
+      "type": "rich-text",
+      "blocks": {
+        "16518399532dbc53d1-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>That’s a big claim, but our dedicated sustainability team alongside external experts are developing a roadmap, in line with climate science, that will see us achieving operational and product climate neutrality, then net zero and, ultimately, climate positivity. <br\/><br\/>The actions we are taking to achieve our goals involve a holistic approach, encompassing our products, the planet and its people. These elements form the TAP® Pillars of Sustainability; Product Stewardship, Climate Leadership and Social Responsibility.<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16518399532dbc53d1-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "desktop_content_alignment": "center",
+        "custom_class": "",
+        "padding_top": 106,
+        "padding_bottom": 106
+      }
+    },
+    "16518393493abb9d31": {
+      "type": "multicolumn",
+      "blocks": {
+        "16518393493864eb53-0": {
+          "type": "column",
+          "settings": {
+            "block_bg_color": "",
+            "image": "shopify:\/\/shop_images\/layer_74_6.jpg",
+            "sub_title": "",
+            "title": "Our approach to product stewardship incorporates circular economy principles.",
+            "font_weight": "400",
+            "font_size": "24",
+            "head_color": "#202020",
+            "text": "<p>We see value in waste and aim to keep materials circulating in the economy. In 2021 we utilised 606.8 tonnes of recycled PET plastic in our products. By using recycled rather than virgin fibre, we prevented the equivalent of 30.3 million 600m plastic bottles from entering landfill or our oceans, and stopped 716 tonnes CO2-eq greenhouse gases from entering the atmosphere.<br\/><br\/>Our design team puts resource efficiency, dematerialisation and minimising environmental impacts at the heart of its thinking. This results in products that are not only beautiful, but functional and highly durable, with a timeless aesthetic to ensure their longevity.<br\/><br\/>We continue to invest in end-of-life recovery programmes for our products, and actively encouraging our customers to utilise our take-back scheme.<\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "16518393493864eb53-1": {
+          "type": "column",
+          "settings": {
+            "block_bg_color": "",
+            "image": "shopify:\/\/shop_images\/layer_74_copy_3.jpg",
+            "sub_title": "",
+            "title": "Adopting renewable energy and dedicated to decarbonisation.",
+            "font_weight": "400",
+            "font_size": "24",
+            "head_color": "#202020",
+            "text": "<p>On average our regional production hub produces 90MWh of solar energy per year, with a further 99.9kW solar array installation due for completion April 2022 we anticipate our solar production will double. Emissions from solar arrays are &lt;4% of the emissions generated from non-renewables.<br\/><br\/>In 2021 we consumed 55.85MWh from our solar array for manufacturing. This saved an estimated 45 tonnes CO2-eq which would otherwise have been generated from purchased grid energy.<br\/><br\/>We are committed to further investment in renewable energy to reduce our scope 2 emissions and will continue offsetting our unavoidable operational emissions in partnership with Greenfleet, through regenerative carbon removal projects. Since 2017 our contribution has resulted in the equivalent of over 4023 native trees and shrubs being planted in biodiverse forests, that also provide vital habitats for endangered wildlife. In 2022, as we broaden the scope of our measurements, we are including the upfront embodied carbon of the EchoPanel® product portfolio in our offsetting commitments. We have offset 2,620 tonnes CO2-eq through donations which will see the equivalent of a further 4165 native trees and shrubs established through Greenfleet.<\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "16518393493864eb53-2": {
+          "type": "column",
+          "settings": {
+            "block_bg_color": "",
+            "image": "shopify:\/\/shop_images\/layer_74_copy_2_2.jpg",
+            "sub_title": "",
+            "title": "Committed to transparency and sustainable development for the wellbeing of people and our planet.",
+            "font_weight": "normal",
+            "font_size": "24",
+            "head_color": "#202020",
+            "text": "<p>We provide product impact data, ingredient and supply chain transparency. By partnering with the International Living Future Institute, Global GreenTag™ and Australasian EPD, we ensure our supply chain and building code compliance data is independently verified, allowing our products to be specified with confidence in projects across the globe.<br\/><br\/>We aim to maximise sustainable materials and Indoor Environment Quality (IEQ) credits under global green building tools like Green Star, LEED v4.1, BREEAM® and the WELL Building Standard™.<br\/><br\/>By continually auditing our supply chain, we guarantee our values are highly maintained in areas such as human rights and labour standards, and align our practices, products, and investments with key UN Sustainable Development Goals.<\/p>",
+            "text_color": "#5b5b5b",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16518393493864eb53-0",
+        "16518393493864eb53-1",
+        "16518393493864eb53-2"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "",
+        "heading_color": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "overlap_text": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "block_padding_top": 0,
+        "block_padding_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0
+      }
+    },
+    "1651839534181594e1": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "cover_image": "shopify:\/\/shop_images\/layer_78_b12b8197-c270-4483-a6c1-57ff68ef9d7f.png",
+        "video_url": "https:\/\/youtu.be\/bZaeBu6q4IM",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16518415708dc7d495": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "VIEW OUR PRODUCTS",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "test",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651838097308330e3",
+    "1651838168b9f4e9aa",
+    "165183823610ce9cb4",
+    "1651838505173f35d6",
+    "1652451221fc7f8a42",
+    "1651840720538c2de2",
+    "16518399532d4635c5",
+    "16518393493abb9d31",
+    "1651839534181594e1",
+    "16518415708dc7d495"
+  ]
+}
