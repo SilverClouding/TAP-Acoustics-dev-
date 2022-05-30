@@ -5,6 +5,10 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+.section-{{ section.id }}-padding {
+  margin-left: {{ section.settings.margin_left }}px;
+  margin-right: {{ section.settings.margin_right }}px;
+}
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -12,17 +16,29 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+@media(max-width:767px){
+.section-{{ section.id }}-padding{
+margin-left: 20px;
+margin-right: 20px;
+}
+.section-{{ section.id }}-padding{
+padding-top: 30px;
+padding-bottom: 0px;
+}
+}
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="contact {% unless section.settings.full_width %} page-width{% endunless %} ">
+    <div class="contact-inner">
+    <div class="contact-left">
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
-    {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
-      {%- if form.posted_successfully? -%}
+    <form method="post" action="/contact#ContactForm" id="ContactForm" accept-charset="UTF-8" class="isolate" onsubmit="return validationContact()">
+   {%- if form.posted_successfully? -%}
         <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>
       {%- elsif form.errors -%}
         <div class="form__message">
@@ -36,16 +52,23 @@
           </li>
         </ul>
       {%- endif -%}
+    
       <div class="contact__fields">
         <div class="field">
-          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
-          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+          <input class="field__input" autocomplete="name" type="text" id="name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
+          <label class="field__label" for="name">{{ 'templates.contact.form.name' | t }}</label>
         </div>
+        <div class="field">
+          <input class="field__input" autocomplete="job_title" type="text" id="job_title" name="contact[{{ 'templates.contact.form.job_title' | t }}]" value="" placeholder="{{ 'templates.contact.form.job_title' | t }}">
+          <label class="field__label" for="job_title">{{ 'templates.contact.form.job_title' | t }}</label>
+        </div>
+      </div>   
+    <div class="contact__fields">
         <div class="field field--with-error">
           <input
             autocomplete="email"
             type="email"
-            id="ContactForm-email"
+            id="email"
             class="field__input"
             name="contact[email]"
             spellcheck="false"
@@ -58,20 +81,67 @@
             {% endif %}
             placeholder="{{ 'templates.contact.form.email' | t }}"
           >
-          <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+          <label class="field__label" for="email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
           {%- if form.errors contains 'email' -%}
-            <small class="contact__field-error" id="ContactForm-email-error">
+            <small class="contact__field-error" id="email-error">
               <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
               <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
             </small>
           {%- endif -%}
         </div>
-      </div>
       <div class="field">
-        <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
-        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+          <input class="field__input" autocomplete="phone" type="text" id="phone" name="contact[{{ 'templates.contact.form.phone' | t }}]" value="" placeholder="{{ 'templates.contact.form.phone' | t }}">
+          <label class="field__label" for="phone">{{ 'templates.contact.form.phone' | t }}</label>
+        </div>
       </div>
+    <div class="contact__fields">
+        <div class="field">
+          <input class="field__input" autocomplete="city" type="text" id="city" name="contact[{{ 'templates.contact.form.city' | t }}]" value="" placeholder="{{ 'templates.contact.form.city' | t }}">
+          <label class="field__label" for="city">{{ 'templates.contact.form.city' | t }}</label>
+        </div>
+      
       <div class="field">
+          <input class="field__input" autocomplete="region" type="text" id="region" name="contact[{{ 'templates.contact.form.region' | t }}]" value="" placeholder="{{ 'templates.contact.form.region' | t }}">
+          <label class="field__label" for="region">{{ 'templates.contact.form.region' | t }}</label>
+        </div>
+      </div>    
+    <div class="contact__fields">
+        <div class="field">
+          <select name="contact[country]" id="country">
+            {% for block in section.blocks %}
+            {% if block.type == 'country'%}
+             <option>{{block.settings.country}}</option>
+            {% endif%}
+            {% endfor %}
+           
+          </select>
+        </div>
+      
+      <div class="field" >
+       <select name="contact[enquiry]" id="enquiry">
+            {% for block in section.blocks %}
+            {% if block.type == 'enquiry'%}
+             <option>{{block.settings.enquiry}}</option>
+         {% endif%}
+            {% endfor %}
+           
+          </select>
+        </div>
+      </div>        
+    <div class="contact__fields">
+        <div class="field">
+          <select name="contact[product_optional]" id="product_optional">
+            {% for block in section.blocks %}
+            {% if block.type == 'product_optional'%}
+             <option>{{block.settings.product_optional}}</option>
+            {% endif%} 
+            {% endfor %}
+           
+          </select>
+        </div>
+      
+       </div>        
+     <div class="field">
         <textarea
           rows="10"
           id="ContactForm-body"
@@ -84,13 +154,108 @@
         <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
       </div>
       <div class="contact__button">
-        <button type="submit" class="button">
+        <button type="submit" class="button button--blackbg">
           {{ 'templates.contact.form.send' | t }}
         </button>
       </div>
-    {%- endform -%}
+      </form>
+     </div>
+     <div class="contact-right">
+       {%- if section.settings.heading_right != blank -%}
+      <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">{{ section.settings.heading_right | escape }}</h2>
+       {% endif %}
+       
+       {% if section.settings.heading_sub != blank %}
+        <div class="main-row">          
+          <div class="icon-svg">
+          <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="iphoneIconTitle" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#000000"> <title id="iphoneIconTitle">iPhone</title> <path d="M18,3 L18,21 C18,21.5522847 17.5522847,22 17,22 L7,22 C6.44771525,22 6,21.5522847 6,21 L6,3 C6,2.44771525 6.44771525,2 7,2 L17,2 C17.5522847,2 18,2.44771525 18,3 Z"/> <polygon points="14 2 14 3 10 3 10 2"/> </svg>
+          </div>
+           <div class="main-content">
+             <h4>{{section.settings.heading_sub}}</h4> 
+             <div class="paragraph-t">{{section.settings.fax_number}}</div>
+          </div>
+       </div>
+       {% endif %}
+       
+       {% if section.settings.fax != blank %}
+        <div class="main-row">          
+          <div class="icon-svg">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 463 463" style="enable-background:new 0 0 463 463;" xml:space="preserve">
+<g><g><g><path d="M423.5,144H383v-0.5c0-17.369-14.131-31.5-31.5-31.5H351V39.5c0-4.142-3.357-7.5-7.5-7.5h-224
+				c-4.143,0-7.5,3.358-7.5,7.5V112h-0.5C94.131,112,80,126.13,80,143.5v0.5H39.5C17.72,144,0,161.72,0,183.5v176
+				C0,381.28,17.72,399,39.5,399h39.997c0.17,0,0.336-0.014,0.503-0.025v0.525c0,17.369,14.131,31.5,31.5,31.5h240
+				c17.369,0,31.5-14.131,31.5-31.5V399h40.5c21.78,0,39.5-17.72,39.5-39.5v-176C463,161.72,445.28,144,423.5,144z M351,127h0.5
+				c9.098,0,16.5,7.402,16.5,16.5v0.5h-17V127z M127,119.558c0-0.02,0.003-0.039,0.003-0.058S127,119.461,127,119.441V47h209v72.441
+				c0,0.02-0.003,0.039-0.003,0.058c0,0.019,0.003,0.039,0.003,0.058V144H127V119.558z M95,143.5c0-9.098,7.402-16.5,16.5-16.5h0.5
+				v17H95V143.5z M63,159h337v80.5c0,9.098-7.402,16.5-16.5,16.5h-304c-9.098,0-16.5-7.402-16.5-16.5V159z M80,320h-8.5
+				c-4.687,0-8.5-3.813-8.5-8.5s3.813-8.5,8.5-8.5H80V320z M368,327.442c0,0.02-0.003,0.039-0.003,0.058
+				c0,0.019,0.003,0.039,0.003,0.058V399.5c0,9.098-7.402,16.5-16.5,16.5h-240c-9.098,0-16.5-7.402-16.5-16.5V303h17v88.5
+				c0,4.142,3.357,7.5,7.5,7.5h224c4.143,0,7.5-3.358,7.5-7.5V303h17V327.442z M127,384v-81h209v81H127z M448,359.5
+				c0,13.509-10.99,24.5-24.5,24.5H383v-49h8.5c12.958,0,23.5-10.542,23.5-23.5S404.458,288,391.5,288h-320
+				C58.542,288,48,298.542,48,311.5S58.542,335,71.5,335H80v49.025c-0.167-0.011-0.333-0.025-0.503-0.025H39.5
+				C25.99,384,15,373.009,15,359.5v-176c0-13.509,10.99-24.5,24.5-24.5H48v80.5c0,17.369,14.131,31.5,31.5,31.5h304
+				c17.369,0,31.5-14.131,31.5-31.5V159h8.5c13.51,0,24.5,10.991,24.5,24.5V359.5z M383,320v-17h8.5c4.687,0,8.5,3.813,8.5,8.5
+				s-3.813,8.5-8.5,8.5H383z"/>
+			<path d="M103.5,239c12.958,0,23.5-10.542,23.5-23.5S116.458,192,103.5,192S80,202.542,80,215.5S90.542,239,103.5,239z M103.5,207
+				c4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5s-8.5-3.813-8.5-8.5S98.813,207,103.5,207z"/>
+			<path d="M151.5,223h16c4.143,0,7.5-3.358,7.5-7.5c0-4.142-3.357-7.5-7.5-7.5h-16c-4.143,0-7.5,3.358-7.5,7.5
+				C144,219.642,147.357,223,151.5,223z"/>
+			<path d="M199.5,223h16c4.143,0,7.5-3.358,7.5-7.5c0-4.142-3.357-7.5-7.5-7.5h-16c-4.143,0-7.5,3.358-7.5,7.5
+				C192,219.642,195.357,223,199.5,223z"/>
+			<path d="M311.5,320h-160c-4.143,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h160c4.143,0,7.5-3.358,7.5-7.5
+				C319,323.358,315.643,320,311.5,320z"/>
+			<path d="M311.5,352h-160c-4.143,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h160c4.143,0,7.5-3.358,7.5-7.5
+				C319,355.358,315.643,352,311.5,352z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+          </div>
+           <div class="main-content">
+             <h4>{{section.settings.fax}}</h4>
+             <div class="paragraph-t">{{section.settings.fax_number}}</div>
+          </div>
+       </div>
+       {% endif %}
+       
+       {% if section.settings.email != blank %}
+        <div class="main-row">          
+          <div class="icon-svg">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 425 425" style="enable-background:new 0 0 425 425;" xml:space="preserve"><g><path d="M0,54.729v315.542h425V54.729H0z M212.5,227.318L54.086,84.729h316.828L212.5,227.318z M151.194,212.5L30,321.588V103.412
+		L151.194,212.5z M173.616,232.682l38.884,35l38.884-35l119.53,107.589H54.086L173.616,232.682z M273.806,212.5L395,103.412v218.176
+		L273.806,212.5z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+          </div>
+           <div class="main-content">
+             <h4>{{section.settings.email}}</h4>
+             <div class="paragraph-t">{{section.settings.email_id}}</div>
+          </div>
+       </div>
+       {% endif %}
+             
+       {% if section.settings.address_head != blank %}
+        <div class="main-row">          
+          <div class="icon-svg">
+          <svg width="28px" height="28px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 2)"><path d="m6.5 16.5407715.6311176-.7118691c.71585099-.8191184 1.36011688-1.5983525 1.93279767-2.3377022l.4733382-.6239608c1.97516433-2.6615039 2.96274653-4.77276704 2.96274653-6.33378943 0-3.33218241-2.6862915-6.03344997-6-6.03344997s-6 2.70126756-6 6.03344997c0 1.56102239.98758218 3.67228553 2.96274653 6.33378943l.4733382.6239608c.73630387.9505925 1.5909423 1.9671163 2.56391527 3.0495713z"/><circle cx="6.5" cy="6.5" r="2.5"/></g></svg>
+          </div>
+           <div class="main-content">
+             <h4>{{section.settings.address_head}}</h4>
+             <div class="paragraph-t">{{section.settings.address_content}}</div>
+          </div>
+       </div>
+       {% endif %}
+       
+    </div>
+    
+    
   </div>
+     </div>
 </div>
+<script>
+  function validationContact(){
+ 
+  return  false;
+  }
+
+</script>
+
 
 {% schema %}
 {
@@ -99,6 +264,12 @@
   "class": "section",
   "settings": [
     {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": false
+    },
+	{
       "type": "text",
       "id": "heading",
       "default": "Contact form",
@@ -152,9 +323,79 @@
       "default": "background-1",
       "label": "t:sections.all.colors.label"
     },
+	{
+      "type": "header",
+      "content": "Right Section"
+    },
+	{
+      "type": "text",
+      "id": "heading_right",
+      "default": "Heading",
+      "label": "Heading right"
+    },
+	{
+      "type": "text",
+      "id": "heading_sub",
+      "label": "Heading Sub"
+    },
+	{
+      "type": "richtext",
+      "id": "phone_number",
+      "label": "Phone Number"
+    },
+	{
+      "type": "text",
+      "id": "fax",
+      "label": "Fax Heading"
+    },
+	{
+      "type": "richtext",
+      "id": "fax_number",
+      "label": "Fax Number"
+    },
+	{
+      "type": "text",
+      "id": "email",
+      "label": "Email Id Heading"
+    },
+	{
+      "type": "richtext",
+      "id": "email_id",
+      "label": "Email Id"
+    },
+	{
+      "type": "text",
+      "id": "address_head",
+      "label": "Address Heading"
+    },
+	{
+      "type": "richtext",
+      "id": "address_content",
+      "label": "Address Content"
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
+    },
+	{
+      "type": "range",
+      "id": "margin_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section Margin left",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section Margin right",
+      "default": 0
     },
     {
       "type": "range",
@@ -177,6 +418,47 @@
       "default": 36
     }
   ],
+"blocks": [
+    {
+      "type": "country",
+      "name": "country",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "country",
+          "label": "Country"
+        }
+
+]},
+  {
+      "type": "enquiry",
+      "name": "enquiry",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "enquiry",
+          "label": "Enquiry"
+        }
+
+]},
+  {
+      "type": "product_optional",
+      "name": "product_optional",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "product_optional",
+          "label": "Product Optional"
+        }
+
+]}
+],
+
+
+
   "presets": [
     {
       "name": "t:sections.contact-form.presets.name"

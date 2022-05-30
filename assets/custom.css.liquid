@@ -77,8 +77,17 @@ text-transform:uppercase;
 }
 @media(max-width:992px){
 h2.h2{
+font-size:24px;
+line-height:28px;
+}
+  h2.h0{
+font-size:28px;
+line-height:30px;
+}
+h2.h1{
 font-size:26px;
 line-height:30px;
+
 }
 }
 
@@ -115,7 +124,7 @@ line-height:30px;
   background:transparent;
   content:"";
   z-index:-1;
-}
+} 
 .button.button--primary:after{
   box-shadow:none !important;
   background:#323232;
@@ -201,6 +210,7 @@ line-height:30px;
   text-decoration:underline;
   border:none;
   padding:0;
+  letter-spacing:0;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
@@ -213,7 +223,7 @@ line-height:30px;
   border:none;
   text-decoration:none;
 }
-
+ 
 
 @media(max-width:767px){
   .button.button--blackbg,
@@ -236,8 +246,8 @@ line-height:30px;
   }
 }
 @media(min-width:768px){
-  .button.button--blackbg,
-  .button.button--primary-border{
+  .product .button.button--blackbg,
+  .product .button.button--primary-border{
     min-width:381px;
   }
   body.index .header:after{
@@ -557,25 +567,132 @@ font-size:20px;
   .product-thumbnail-gallery .swiper-slide img{
   height: 130px;
 }
+  .main-page-title.page-title.h0{
+  text-align:center;
+  }
+}
+
+/* contact us */
+ 
+.contact .field__input, .field select{
+border-top:none;
+border-left:none;
+border-right:none;
+border-bottom:1px solid #262626;
+  width:100%;
+}
+.field:after, .select:after, .customer .field:after, .customer select:after, .localization-form__select:after{
+box-shadow:none;
+}
+.field__input, .select__select, .customer .field input, .customer select,
+.field select{
+  font-size:20px;
+  color:#5b5b5b;
+  font-weight:300;
+  letter-spacing:0;
+  font-family: RM Neue TRIAL;
+}
+.field select{
+height: 4.5rem;
+}
+.field__input, .customer .field input{
+padding: 1.5rem 0;
+}
+.field__label, .customer .field label{
+left:0;
+ font-size:20px;
+  color:#5b5b5b;
+  font-weight:300;
+  letter-spacing:0;
+  font-family: RM Neue TRIAL; 
+}
+.field__input:focus, .field__input:not(:placeholder-shown), .field__input:-webkit-autofill, 
+.customer .field input:focus, .customer .field input:not(:placeholder-shown), .customer .field input:-webkit-autofill{
+    padding: 2.2rem 1.5rem 0.8rem 0rem;
+}
+.field__input:focus, .select__select:focus, .customer .field input:focus, .customer select:focus, .localization-form__select:focus.localization-form__select:after{
+box-shadow:none;
+}
+.field:hover.field:after, .select:hover.select:after, .select__select:hover.select__select:after, .customer .field:hover.field:after, 
+.customer select:hover.select:after, .localization-form__select:hover.localization-form__select:after{
+box-shadow:none;
+}
+
+.field__input:focus~.field__label, .field__input:not(:placeholder-shown)~.field__label, .field__input:-webkit-autofill~.field__label, 
+.customer .field input:focus~label, .customer .field input:not(:placeholder-shown)~label, .customer .field input:-webkit-autofill~label{
+left:0;
+}
+.field select:focus-visible{
+outline:none;
+  box-shadow:none;
+}
+.main-row{
+display:flex; 
+  margin-bottom:26px;
+}
+.main-row .icon-svg{
+  width:22px;
+  margin-right:20px;
+}
+.main-content h4{
+font-size:20px;
+  color:#202020;
+  font-weight:600;
+  font-family: RM Neue TRIAL;
+}
+.main-content .paragraph-t,
+.main-content .paragraph-t p,
+.main-content .paragraph-t a{
+font-size:20px;
+  color:#5b5b5b;
+  font-weight:300;
+  font-family: RM Neue TRIAL;
+  text-decoration:none;
+  line-height:30px;
+}
+.main-content .paragraph-t a:hover{
+text-decoration:underline;
+  color:#000;
 }
 
 
+@media(min-width:1200px){
+.contact-inner{
+    display: flex;
+    width: 100%;
+    column-gap: 85px;
+}
+.contact-left{
+width:75%;
+}
+.contact-right{
+width:25%;
+}
+  
+}
+@media(max-width:1200px){
+  .main-row{
+display:flex; 
+  margin-bottom:15px;
+}
+ 
+  .main-content h4{
+font-size:18px;
+  line-height:28px;
+}
+.main-content .paragraph-t,
+.main-content .paragraph-t p,
+.main-content .paragraph-t a{
+font-size:18px;
+  line-height:28px;
+}
+  .contact-right{
+  margin-top:30px;
+  } 
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* team */
 
 
 

@@ -1,0 +1,197 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "165364162462ecd24a": {
+      "type": "image-banner",
+      "blocks": {
+        "1653641624f014fc70-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Insights and inspiration",
+            "heading_color": "#ffffff",
+            "heading_size": "h1"
+          }
+        },
+        "1653641624f014fc70-1": {
+          "type": "text",
+          "settings": {
+            "text": "Read the latest articles from the Autex Acoustics team",
+            "b_text_color": "#ffffff",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "1653641624f014fc70-0",
+        "1653641624f014fc70-1"
+      ],
+      "settings": {
+        "margin_top": 20,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
+        "image": "shopify:\/\/shop_images\/banner_b2acec4b-9566-4b8a-80c8-4a84d482043d.jpg",
+        "banner_shadow": true,
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "16536416290588ae95": {
+      "type": "image-background-and-text",
+      "settings": {
+        "bg_color": "#333132",
+        "bgopacity": "",
+        "text": "Browse articles exploring design thoughts, research, and stories from the Autex Acoustics team.",
+        "text_color": "#ffffff",
+        "text_transform": "capitalize",
+        "font_weight": "light",
+        "font_size": "24",
+        "mob_font_size": "20",
+        "line_height": "30",
+        "text_alignment": "center",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_style_secondary_1": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mob_padding_top": 0,
+        "mob_padding_bottom": 20,
+        "inner_padding_top": 55,
+        "inner_padding_bottom": 55
+      }
+    },
+    "165364203515c17ce8": {
+      "type": "blog-filter",
+      "settings": {
+        "bg_color": "#f4f3ef",
+        "title": "What are you looking for?",
+        "heading_size": "h1",
+        "sub_head": "Article Category:",
+        "clearfilters": "Clear filters",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "margin_left": 75,
+        "margin_right": 75
+      }
+    },
+    "16536423904c061380": {
+      "type": "slider",
+      "blocks": {
+        "9a62d7e4-464d-4824-b20f-ec0ac69cafbb": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-5.jpg",
+            "img_title": "TAP<sup>®<\/sup> 3D WALL SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        },
+        "7360c426-dcc8-44a0-8d87-130b6257769b": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-6.jpg",
+            "img_title": "TAP<sup>®<\/sup> FLOATING CEILING  SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        },
+        "0dbc44ba-5bee-4e73-a9fe-e867eb55cc64": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-8.jpg",
+            "img_title": "TAP<sup>®<\/sup> EMBOSSED WALL  SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "9a62d7e4-464d-4824-b20f-ec0ac69cafbb",
+        "7360c426-dcc8-44a0-8d87-130b6257769b",
+        "0dbc44ba-5bee-4e73-a9fe-e867eb55cc64"
+      ],
+      "settings": {
+        "bg_color": "",
+        "title": "Find similar solutions",
+        "heading_size": "h1",
+        "sub_head": "",
+        "overlap_text": true,
+        "image_overlay_opacity": 50,
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "margin_left": 75,
+        "margin_right": 75
+      }
+    },
+    "165364577043cb541d": {
+      "type": "image-background-and-text",
+      "settings": {
+        "bg_color": "#000000",
+        "bgopacity": "0.5",
+        "texture_img": "shopify:\/\/shop_images\/lets_banner_d5f52282-5665-4a95-9e0a-979a4094d004.jpg",
+        "text": "FEELING INSPIRED? WE WOULD LOVE TO WORK WITH YOU!",
+        "text_color": "#ffffff",
+        "text_transform": "uppercase",
+        "font_weight": "bold",
+        "font_size": "32",
+        "mob_font_size": "20",
+        "line_height": "30",
+        "text_alignment": "center",
+        "button_label_1": "Contact Us",
+        "button_link_1": "#",
+        "button_style_secondary_1": true,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "mob_padding_top": 0,
+        "mob_padding_bottom": 30,
+        "inner_padding_top": 55,
+        "inner_padding_bottom": 55
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165364162462ecd24a",
+    "16536416290588ae95",
+    "165364203515c17ce8",
+    "16536423904c061380",
+    "165364577043cb541d"
+  ]
+}

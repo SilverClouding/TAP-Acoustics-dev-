@@ -34,6 +34,11 @@
 .section-{{ section.id }}.page-width {
   margin:0 auto;
 }
+#Banner-{{ section.id }} .banner__heading sup{
+font-size:20px;
+position: relative;
+top: -8px;
+}
 #Banner-{{ section.id }} .banner__heading.h0{
 font-size:62px;
 font-weight:600;
@@ -62,7 +67,7 @@ content:'';
 left:0;
 width:100%;
 height:100%;
-background:rgba(32, 32, 32, 0.7);
+background:rgba(32, 32, 32, 0.9);
     opacity: 0.7;
 z-index:1;
 }
@@ -71,6 +76,8 @@ z-index:1;
 #Banner-{{ section.id }} {
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: {{ section.settings.margin_top }}px;
+  margin-bottom: {{ section.settings.margin_bottom }}px;
 }
 .image-banner .banner__box{padding:4rem 20px;}
 #Banner-{{ section.id }} .banner__heading.h0{
@@ -146,7 +153,7 @@ line-height:28px;
         #Banner-{{ section.id }} .banner__buttons{color:{{block.settings.heading_color}};}
         #Banner-{{ section.id }} .banner__text{color:{{block.settings.b_text_color}}; margin-top:8px; line-height:30px;}
         #Banner-{{ section.id }} .banner__buttons{margin-top:55px;}
-        #Banner-{{ section.id }} .banner__buttons.link-btn{margin-top:10px;}
+        #Banner-{{ section.id }} .banner__buttons.link-btn{margin-top:20px;}
         @media(max-width:992px){
          #Banner-{{ section.id }} .banner__text{font-size:18px; line-height:26px;}
           #Banner-{{ section.id }} .banner__buttons{margin-top:35px;}
@@ -185,13 +192,33 @@ line-height:28px;
   "settings": [
     {
       "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile Margin Bottom",
+      "default": 0
+    },
+	{
+      "type": "range",
       "id": "margin_left",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "px",
       "label": "Section Margin left",
-      "default": 30
+      "default": 0
     },
     {
       "type": "range",
@@ -201,7 +228,7 @@ line-height:28px;
       "step": 1,
       "unit": "px",
       "label": "Section Margin right",
-      "default": 30
+      "default": 0
     },
 	{
       "type": "image_picker",

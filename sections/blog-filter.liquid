@@ -2,81 +2,217 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+	background:{{section.settings.bg_color}};
   }
+.section-{{ section.id }}-padding .brand-icons-section{
+margin-left: {{ section.settings.margin_left }}px;
+  margin-right: {{ section.settings.margin_right }}px;
+}
+.brand-icons-section select{
+border-bottom:1px solid #202020;
+color:#202020;
+font-size:20px;
+font-weight:300;
+font-family: 'RM Neue TRIAL';
+padding:10px 0 8px !important;
+min-height:unset;
+height:unset;
+-webkit-appearance: auto;
+    appearance: auto;
+background:transparent;
+}
+.brand-icons-section select:focus{
+box-shadow:unset;
+}
+.brand-search{
+background:#fff;
+padding:70px 55px;
+}
+.section-{{ section.id }}-padding .brand-title.h0{
+font-size:62px;
+font-weight:600;
+line-height:65px;
+text-transform:uppercase;
+}
+.section-{{ section.id }}-padding .brand-title.h1{
+font-size:32px;
+font-weight:600;
+line-height:36px;
+text-transform:uppercase;
+}
+.section-{{ section.id }}-padding .brand-title.h2{
+font-size:30px;
+font-weight:600;
+line-height:34px;
+text-transform:uppercase;
+}
+.section-{{ section.id }}-padding .sub-head{
+color:#5b5b5b;
+font-size:20px;
+font-weight:300;
+}
+.section-{{ section.id }}-padding .filter-container,
+.section-{{ section.id }}-padding .filter-inner-con{
+display:flex;
+width:100%;
+gap:30px;
+}
+.section-{{ section.id }}-padding .filter-container{
+margin-top:100px;
+}
+.section-{{ section.id }}-padding .block-item{
+width:33.3%;
+}
+.section-{{ section.id }}-padding .block-item a{
+text-decoration:none;
+}
+.section-{{ section.id }}-padding .category-name{
+color:#5b5b5b;
+font-size:20px;
+font-weight:300;
+line-height:24px;
+padding-bottom:10px;
+padding-top:5px;
+}
+.section-{{ section.id }}-padding .category-title{
+color:#202020;
+font-size:24px;
+font-weight:400;
+line-height:30px;
+}
+.section-{{ section.id }}-padding .article-card-img img{
+width:100%;
+height:100%;
+}
+.section-{{ section.id }}-padding .clearfilter{
+color:#5b5b5b;
+font-size:20px;
+font-weight:300;
+line-height:24px;
+padding-top: 15px;
+text-decoration: none;
+display: flex;
+justify-content: flex-end;
+}
+.section-{{ section.id }}-padding .clearfilter:hover{
+text-decoration:underline;
+}
+@media(max-width:767px){
+.section-{{ section.id }}-padding .block-item{
+width:100%;
+}
+.section-{{ section.id }}-padding .filter-container,
+.section-{{ section.id }}-padding .filter-inner-con{
+flex-wrap:wrap;
+width:100%;
+gap:30px;
+}
+.section-{{ section.id }}-padding .category-name{
+font-size:18px;
+line-height:22px;
+padding-bottom:5px;
+}
+.section-{{ section.id }}-padding .category-title{
+font-size:20px;
+line-height:26px;
+}
+.brand-search {
+    padding: 40px 20px;
+}
+
+}
+@media(max-width:992px){
+ .section-{{ section.id }}-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+.section-{{ section.id }}-padding .brand-title.h0{
+font-size:28px;
+line-height:36px;
+}
+.section-{{ section.id }}-padding .brand-title.h1{
+font-size:26px;
+line-height:30px;
+}
+.section-{{ section.id }}-padding .brand-title.h2{
+font-size:24px;
+line-height:28px;
+}
+.section-{{ section.id }}-padding .filter-container{
+margin-top:30px;
+}
+.section-{{ section.id }}-padding .brand-icons-section{
+margin-left: 20px;
+  margin-right: 20px;
+}
+.section-{{ section.id }}-padding .block-item{
+margin-bottom:30px;
+}
+}
+
+
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+.section-{{ section.id }}-padding .block-item{
+margin-bottom:80px;
+}
   }
 {%- endstyle -%}
 
 
 
 
-<style>
-  .article-card{
-  width:30%;
-  }
-  .container{
-    display:flex;
-  }
-</style>
+
 
 <div  class="isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
 
 <div class="brand-icons-section">
  
-  <h2>{{section.settings.title}}</h2>
-
+<div class="brand-search">
+<h2 class="brand-title {{ section.settings.heading_size }}">{{section.settings.title}}</h2>
+{% if section.settings.sub_head != blank %}
+  <p class="sub-head">{{section.settings.sub_head}}</p>
+  {% endif %}
   
- 
-  
-  <select  id="option-select" class="field__input">
-    
-      
-{% for link in linklists.blog_filter.links %}
-	
+<select  id="option-select" class="field__input">
+{% for link in linklists.blog_filter.links %}	
 <option value="{{ link.url |remove: "/blogs/"}}">{{ link.title }}</option>
-{% endfor %}
-    
-</select>
-  
-  
-  <br/>
+{% endfor %}   
+</select>  
+  {% if section.settings.clearfilters %}
+  <a href="#" class="clearfilter">{{section.settings.clearfilters}}</a>
+  {% endif %}
+  </div>
 
-      
+  <div class="filter-container">     
 {% for link in linklists.blog_filter.links %}
 	
   {%assign han=link.url |remove: '/blogs/'%}
   {%if forloop.index==1%}
     <script>var lastcontent={{han|json}}</script>{%endif%}
   
-  <div class="container" id="cat{{han}}" {%if forloop.index==1%}style="display:block" {%else%} style="display:none"{%endif%}>
+  <div class="filter-inner-con" id="cat{{han}}" {%if forloop.index==1%}style="display:flex" {%else%} style="display:none"{%endif%}>
  
     {% for article in blogs[han].articles %}
   
-  <div class="article-card">
+  <div class="block-item article-card">
   <a href="{{article.link}}">
-  <img src="{{ article.image.src | image_url: width: 500 }}"/>
-  <p>{{ link.title }}</p>
-  <p>{{article.title}}</p>
+    <div class="article-card-img"><img src="{{ article.image.src | image_url: width: 500 }}"/></div>
+  <p class="category-name">{{ link.title }}</p>
+  <p class="category-title">{{article.title}}</p>
   
     </a>
   </div>
 
 {% endfor %} 
   </div>
+  
 {% endfor %}
-  
-  
-  
-  
-  
-  
-
-  
+   </div>
   
 </div>
 
@@ -85,16 +221,16 @@
 
 <script>
   
+  document.getElementById('option-select').addEventListener('change', function() {
   
-document.getElementById('option-select').addEventListener('change', function() {
-  
-  document.getElementById(`cat${this.value}`).style.display="block";
+  document.getElementById(`cat${this.value}`).style.display="flex";
   
    document.getElementById(`cat${lastcontent}`).style.display="none";
   
   lastcontent=this.value;
   
 });
+
   
   
 
@@ -106,18 +242,53 @@ document.getElementById('option-select').addEventListener('change', function() {
 {
 "name": "Blog Filter",
 "settings": [
- {
+{
+  "type": "color",
+  "id": "bg_color",
+  "label": "Section Background Color"
+},  
+{
   "type": "text",
   "id": "title",
   "label": "Section Heading"
 },
-{
+		{
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+	{
+  "type": "text",
+  "id": "sub_head",
+  "label": "Sub Heading"
+	},
+	{
+  "type": "text",
+  "id": "clearfilters",
+  "label": "Clear Filters"
+	},
+	{
       "type": "checkbox",
       "id": "full_width",
       "label": "t:sections.video.settings.full_width.label",
       "default": false
     },
-{
+	{
       "type": "range",
       "id": "padding_top",
       "min": 0,
@@ -136,6 +307,26 @@ document.getElementById('option-select').addEventListener('change', function() {
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+	{
+      "type": "range",
+      "id": "margin_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section Margin Left",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "margin_right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section Margin right",
+      "default": 30
     }
 
 

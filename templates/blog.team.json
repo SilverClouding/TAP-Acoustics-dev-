@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "16539099363badee89": {
+      "type": "image-background-and-text",
+      "settings": {
+        "bg_color": "#000000",
+        "bgopacity": "0.5",
+        "texture_img": "shopify:\/\/shop_images\/texture.jpg",
+        "text": "Sales\/Marketing + Design Teams",
+        "text_color": "#fefefe",
+        "text_transform": "uppercase",
+        "font_weight": "bold",
+        "font_size": "62",
+        "mob_font_size": "32",
+        "line_height": "",
+        "text_alignment": "center",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_style_secondary_1": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mob_padding_top": 0,
+        "mob_padding_bottom": 0,
+        "inner_padding_top": 70,
+        "inner_padding_bottom": 70
+      }
+    },
+    "main": {
+      "type": "team-section",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 30,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "16539099363badee89",
+    "main"
+  ]
+}

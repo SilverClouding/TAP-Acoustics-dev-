@@ -14,14 +14,16 @@
         "1652077687cf85e91f-0": {
           "type": "heading",
           "settings": {
-            "heading": "Making of TAP®",
-            "heading_size": "h1"
+            "heading": "Making of TAP<sup>®<\/sup>",
+            "heading_color": "",
+            "heading_size": "h0"
           }
         },
         "1652077687cf85e91f-1": {
           "type": "text",
           "settings": {
             "text": "Pushing the boundaries of acoustic design",
+            "b_text_color": "#ffffff",
             "text_style": "body"
           }
         }
@@ -31,28 +33,50 @@
         "1652077687cf85e91f-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner_c6819cd9-82be-49ba-ba59-5403133d8435.png",
+        "margin_top": 20,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
+        "image": "shopify:\/\/shop_images\/banner_298b1440-f5b2-42c2-b6f1-f34ca3afd7ad.jpg",
+        "banner_shadow": true,
         "image_overlay_opacity": 0,
         "image_height": "small",
         "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
+        "stack_images_on_mobile": true,
+        "show_text_below": false
       }
     },
     "1652077691f1a7be21": {
       "type": "image-background-and-text",
       "settings": {
-        "title": "",
-        "back_image": "shopify:\/\/shop_images\/layer_80.png",
-        "back_title": "TAP®, a brain-child of Times Fiberfill Pvt. Ltd., has been manufacturing high-quality acoustic panels and felts since 2006, thereby contributing towards a design-led sustainable environment.",
+        "bg_color": "#333132",
+        "bgopacity": "",
+        "text": "TAP®, a brain-child of Times Fiberfill Pvt. Ltd., has been manufacturing high-quality acoustic panels and felts since 2006, <br>thereby contributing towards a design-led sustainable environment.",
+        "text_color": "#ffffff",
+        "text_transform": "capitalize",
+        "font_weight": "light",
+        "font_size": "24",
+        "mob_font_size": "20",
+        "line_height": "30",
+        "text_alignment": "center",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_style_secondary_1": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
         "full_width": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mob_padding_top": 0,
+        "mob_padding_bottom": 0,
+        "inner_padding_top": 50,
+        "inner_padding_bottom": 50
       }
     },
     "1652078051ce830683": {
@@ -62,6 +86,7 @@
           "type": "heading",
           "settings": {
             "heading": "Manufacturing  excellence",
+            "heading_color": "#202020",
             "heading_size": "h1"
           }
         },
@@ -69,7 +94,9 @@
           "type": "text",
           "settings": {
             "text": "<p>Our commitment to innovation and sustainability brings new environment-friendly alternatives to the market. As a manufacturer, we are highly aware of our responsibility to the environment and we work hard to minimise the environmental impact of all our manufacturing and business practices. Each product is tested rigorously for fire safety, durability and acoustic performance. We are proud to be accredited in ISO 9001, and other global green-building rating tools, including IGBC & GOTS. <\/p>",
-            "text_style": "body"
+            "text_style": "body",
+            "body_text_color": "#b32c2c",
+            "line_height": "30"
           }
         }
       },
@@ -78,18 +105,21 @@
         "165207805130aea363-1"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
+        "bg_color": "",
         "image": "shopify:\/\/shop_images\/rectangle_22.png",
-        "height": "large",
+        "height": "adapt",
         "desktop_image_width": "large",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "margin_left": 0,
+        "margin_right": 75
       }
     },
     "165207823096a53f2c": {
@@ -99,6 +129,7 @@
           "type": "heading",
           "settings": {
             "heading": "Let’s create something extraordinary",
+            "heading_color": "#ffffff",
             "heading_size": "h1"
           }
         },
@@ -106,16 +137,17 @@
           "type": "text",
           "settings": {
             "text": "As creators and innovators, we understand the pursuit of the bold and unusual, the rare and exceptional ideas. Although TAP® originally started with only Solid designs, the success of this eventually led to addition of a myriad of products within both wall and ceiling categories. TAP®’s customisation tools offer unique avenues for creative expression to ensure that all spaces look, feel and sound great.",
+            "b_text_color": "#ffffff",
             "text_style": "body"
           }
         },
         "1652078230bf968c2e-2": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Learn more about our R&D journey here",
+            "button_label_1": "Learn more about our R&D journey here",
+            "button_link_1": "#",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
             "button_link_2": "#",
             "button_style_secondary_2": false
           }
@@ -127,13 +159,18 @@
         "1652078230bf968c2e-2"
       ],
       "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
         "image": "shopify:\/\/shop_images\/lets_banner_d5f52282-5665-4a95-9e0a-979a4094d004.jpg",
-        "image_overlay_opacity": 0,
+        "banner_shadow": false,
+        "image_overlay_opacity": 70,
         "image_height": "medium",
         "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -147,6 +184,7 @@
           "type": "heading",
           "settings": {
             "heading": "This is what the future sounds  like",
+            "heading_color": "#ffffff",
             "heading_size": "h1"
           }
         },
@@ -154,14 +192,20 @@
           "type": "text",
           "settings": {
             "text": "<p>Learn about our commitment to the environment and how we are contributing to the climate. Leaders in sustainable and ethical acoustic solutions. <\/p>",
-            "text_style": "body"
+            "text_style": "body",
+            "body_text_color": "#ffffff",
+            "line_height": "30"
           }
         },
         "1652078458e49f6c35-2": {
           "type": "button",
           "settings": {
-            "button_label": "LEARN MORE ABOUT OUR SUSTAINABILITY JOURNEY HERE",
-            "button_link": "#"
+            "button_label_1": "LEARN MORE ABOUT OUR SUSTAINABILITY JOURNEY HERE",
+            "button_link_1": "#",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -171,18 +215,21 @@
         "1652078458e49f6c35-2"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
+        "bg_color": "",
         "image": "shopify:\/\/shop_images\/rectangle_22_copy.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-1",
+        "color_scheme": "accent-2",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0
       }
     },
     "165207909885e1a353": {
@@ -192,21 +239,39 @@
           "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/layer_74_4.jpg",
-            "img_title": "Baffle Ceiling Series"
+            "img_title": "Baffle Ceiling Series",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": "#ffffff"
           }
         },
         "4c0f4903-7d48-48e5-8285-6159c22155e3": {
           "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/layer_74_copy_4.jpg",
-            "img_title": "Groove Wall Series"
+            "img_title": "Groove Wall Series",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
           }
         },
         "24f6233d-9fe3-431e-ade3-4d07a450cd33": {
           "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/layer_74_copy_2_4.jpg",
-            "img_title": "3D Wall Series"
+            "img_title": "3D Wall Series",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
           }
         }
       },
@@ -216,11 +281,17 @@
         "24f6233d-9fe3-431e-ade3-4d07a450cd33"
       ],
       "settings": {
-        "title": "",
-        "sub_head": "",
-        "full_width": false,
-        "padding_top": 12,
-        "padding_bottom": 4
+        "bg_color": "#f4f3ef",
+        "title": "Unique Designs",
+        "heading_size": "h1",
+        "sub_head": "These designs are unique to TAP® Acoustics, specially curated by our team of talented designers.",
+        "overlap_text": true,
+        "image_overlay_opacity": 0,
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "margin_left": 75,
+        "margin_right": 75
       }
     },
     "16520786110bb9ec50": {
@@ -230,6 +301,7 @@
           "type": "heading",
           "settings": {
             "heading": "Feeling inspired? We'd  love to work with you.",
+            "heading_color": "",
             "heading_size": "h1"
           }
         }
@@ -238,27 +310,36 @@
         "1652078611e0f3678a-0"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
+        "bg_color": "#f4f3ef",
         "image": "shopify:\/\/shop_images\/rectangle_22_2.png",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "large",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-1",
+        "color_scheme": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "margin_left": 0,
+        "margin_right": 75
       }
     },
     "16520857277e17c979": {
       "type": "blog-filter",
       "settings": {
+        "bg_color": "#f4f3ef",
         "title": "What are you looking for?",
-        "full_width": false,
-        "padding_top": 32,
-        "padding_bottom": 36
+        "heading_size": "h1",
+        "sub_head": "Article Category:",
+        "clearfilters": "Clear filters",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_left": 75,
+        "margin_right": 75
       }
     }
   },

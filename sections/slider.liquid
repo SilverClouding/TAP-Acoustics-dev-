@@ -3,43 +3,184 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+	background:{{section.settings.bg_color}};
+}
+.section-{{ section.id }}-padding .brand-icons-section,
+.section-{{ section.id }}-padding .swiper.selectortap{
+margin-left: {{ section.settings.margin_left }}px;
+margin-right: {{ section.settings.margin_right }}px;
+}
+.section-{{ section.id }}-padding .slider-title.h0{
+font-size:62px;
+font-weight:600;
+line-height:65px;
+text-transform:uppercase;
+}
+.section-{{ section.id }}-padding .slider-title.h1{
+font-size:32px;
+font-weight:600;
+line-height:36px;
+text-transform:uppercase;
+}
+.section-{{ section.id }}-padding .slider-title.h2{
+font-size:30px;
+font-weight:600;
+line-height:34px;
+text-transform:uppercase;
+}
+.section-{{ section.id }}-padding .slider-subtitle{
+font-size:20px;
+letter-spacing:0;
+margin-top: 12px;
+color:#202020;
+}
+.section-{{ section.id }}-padding .swiper-slide{
+position:relative;
+}
+.section-{{ section.id }}-padding .overlap_text{position:absolute; left:38px; bottom:36px; z-index:1; padding-right:20px;}
+  
+.section-{{ section.id }}-padding .brand-icons-section{
+margin-bottom:25px;
 
+}
+.section-{{ section.id }}-padding .swiper-slide{
+position:relative;
+}
+.section-{{ section.id }}-padding .swiper-slide::after {
+    position:absolute;
+	width:100%;
+	height:100%;
+    background:rgba(0, 0, 0, {{ section.settings.image_overlay_opacity}}%);
+    content:'';
+    top: 0;
+	left:0;
+  }
+.section-{{ section.id }}-padding .selectortap .swiper-button-prev{
+left:20px;
+}
+.section-{{ section.id }}-padding .selectortap .swiper-button-next{
+right:20px;
+}
+.section-{{ section.id }}-padding .selectortap .swiper-button-next,
+.section-{{ section.id }}-padding .selectortap .swiper-button-prev{
+background:rgba(255, 255, 255, 0.7);
+display:flex;
+width:45px;
+height:45px;
+-webkit-border-radius:50%;
+-o-border-radius:50%;
+-moz-border-radius:50%;
+border-radius:50%;
+align-items: center;
+justify-content: center;
+
+}
+.section-{{ section.id }}-padding .selectortap .swiper-button-next:after,
+.section-{{ section.id }}-padding .selectortap .swiper-button-prev:after{
+font-size:20px;
+color:#232323;
+}
+
+@media(max-width:767px){
+.section-{{ section.id }}-padding .overlap_text{position:absolute; left:20px; bottom:30px;}
+}
+@media(max-width:992px){
+ .section-{{ section.id }}-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.section-{{ section.id }}-padding .brand-icons-section {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.section-{{ section.id }}-padding .brand-icons-section,
+.section-{{ section.id }}-padding .swiper.selectortap{
+margin-left: 20px;
+margin-right: 20px;
+}
+.section-{{ section.id }}-padding .slider-title.h0{
+font-size:28px;
+line-height:30px;
+}
+.section-{{ section.id }}-padding .slider-title.h1{
+font-size:26px;
+line-height:30px;
+}
+.section-{{ section.id }}-padding .slider-title.h2{
+font-size:24px;
+line-height:28px;
+}
+.section-{{ section.id }}-padding .slider-subtitle{
+font-size:18px;
+line-height:26px;
+margin-top:5px;
+}
+
+.section-{{ section.id }}-padding .selectortap .swiper-button-prev{
+left:10px;
+}
+.section-{{ section.id }}-padding .selectortap .swiper-button-next{
+right:10px;
+}
+.section-{{ section.id }}-padding .selectortap .swiper-button-next,
+.section-{{ section.id }}-padding .selectortap .swiper-button-prev{
+background:rgba(255, 255, 255, 0.7);
+width:30px;
+height:30px;
+}
+.section-{{ section.id }}-padding .selectortap .swiper-button-next:after,
+.section-{{ section.id }}-padding .selectortap .swiper-button-prev:after{
+font-size:16px;
+}
+
+}
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-  }
+}
+
 {%- endstyle -%}
-
-<style>
-  .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-</style>
-
-
 
 <div  class="isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
 
 <div class="brand-icons-section">
  
-  <h2 class="slider-title">{{section.settings.title}}</h2>
+  <h2 class="slider-title {{ section.settings.heading_size }}">{{section.settings.title}}</h2>
   <p class="slider-subtitle">{{section.settings.sub_head}}</p>
 </div>
 
-</div>
+
 <div class="swiper selectortap">
         <div class="swiper-wrapper">
 			
           {%for block in section.blocks%}
+          {% style %}
+        
+        .section-{{ section.id }}-padding .img-caption{font-size:{{block.settings.font_size}}px; text-transform:{{block.settings.text_transform}}; color:{{block.settings.head_color}}; font-weight:{{block.settings.font_weight}}; line-height:normal;}
+        .section-{{ section.id }}-padding .img-caption sup{ font-size:20px;}
+        .section-{{ section.id }}-padding .rte{font-size:20px; margin-top:5px; line-height:28px; color:{{block.settings.text_color}};}
+        .section-{{ section.id }}-padding .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+          @media(max-width:992px){
+          .section-{{ section.id }}-padding .img-caption{font-size:22px; line-height:26px;}
+        .section-{{ section.id }}-padding .rte{font-size:16px; line-height:22px;}
+          }
+           {% endstyle %}
           	<div class="swiper-slide">
           <img src="{{block.settings.image|img_url:'original'}}"/>
+              <div class="{% if section.settings.overlap_text %}overlap_text{% endif %}">
               <h3 class="img-caption">{{block.settings.img_title}}</h3>
+              
+              {%- if block.settings.text != blank -%}
+                  <div class="rte">{{ block.settings.text }}</div>
+                {%- endif -%}
+                </div>
           	</div>
             {%endfor%}
 
@@ -47,7 +188,7 @@
   <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
-
+</div>
 <script>
 
 
@@ -57,8 +198,22 @@
           prevEl: ".swiper-button-prev",
         },
             loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 1,
+            spaceBetween: 10,
+         breakpoints: {
+    767: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+     768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }      
+  }
            
         });
     </script>
@@ -67,23 +222,63 @@
 {
 "name": "Slider",
 "settings": [
- {
+{
+  "type": "color",
+  "id": "bg_color",
+  "label": "Section Background Color"
+}, 
+{
   "type": "text",
   "id": "title",
   "label": "Section Heading"
 },
- {
-  "type": "text",
-  "id": "sub_head",
-  "label": "Sub Heading"
-},
 {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+ 		{
+        "type": "text",
+        "id": "sub_head",
+        "label": "Sub Heading"
+		},
+		{
+          "type": "checkbox",
+          "id": "overlap_text",
+          "label": "Overlap Text"
+        },
+	{
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+      "default": 0
+    },
+	{
       "type": "checkbox",
       "id": "full_width",
       "label": "t:sections.video.settings.full_width.label",
       "default": false
     },
-{
+	{
       "type": "range",
       "id": "padding_top",
       "min": 0,
@@ -102,6 +297,26 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+	{
+      "type": "range",
+      "id": "margin_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section Margin Left",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "margin_right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section Margin right",
+      "default": 30
     }
 
 
@@ -109,7 +324,7 @@
 
  "blocks": [
      {
-       "name": "icon",
+       "name": "image",
        "type": "icon",
        "settings": [
          {
@@ -121,7 +336,60 @@
           "type": "text",
           "id": "img_title",
           "label": "Image Heading"
+        },
+		{
+          "type": "text",
+          "id": "font_size",
+          "label": "Heading Size"
+        },
+		{
+          "type": "color",
+          "id": "head_color",
+          "label": "Heading Color"
+        },
+		{
+          "type": "select",
+          "id": "text_transform",
+          "options": [
+            {
+              "value": "capitalize",
+              "label": "Capitalize"
+            },
+            {
+              "value": "uppercase",
+              "label": "Uppercase"
+            }
+          ],
+          "default": "capitalize",
+          "label": "Capitalize"
+    	},
+		{
+          "type": "select",
+          "id": "font_weight",
+          "options": [
+            {
+              "value": "400",
+              "label": "Normal"
+            },
+            {
+              "value": "600",
+              "label": "Bold"
+            }
+          ],
+          "default": "400",
+          "label": "Normal"
+    	},
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description"
+        },
+		{
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color"
         }
+		
        ]
      }
    ],

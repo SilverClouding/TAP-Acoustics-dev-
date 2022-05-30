@@ -206,11 +206,16 @@
     "contact": {
       "form": {
         "title": "Contact form",
-        "name": "Name",
-        "email": "Email",
-        "phone": "Phone number",
-        "comment": "Comment",
-        "send": "Send",
+        "name": "Your full name",
+        "job_title": "your job title",
+        "email": "Email address",
+        "phone": "Phone number(optional)",
+        "city": "Your city",
+        "region": "Region",
+        "country": "Your country(optional)",
+        "Enquiry": "Enquiry type",
+        "comment": "Type your message here",
+        "send": "Send Enquiry",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
         "error_heading": "Please adjust the following:"
       }

@@ -1,0 +1,194 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1653650910924336a4": {
+      "type": "image-banner",
+      "blocks": {
+        "16536509103d587755-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Portfolio",
+            "heading_color": "#ffffff",
+            "heading_size": "h1"
+          }
+        },
+        "16536509103d587755-1": {
+          "type": "text",
+          "settings": {
+            "text": "Lorem ipsum dolor sit amet",
+            "b_text_color": "#ffffff",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16536509103d587755-0",
+        "16536509103d587755-1"
+      ],
+      "settings": {
+        "margin_top": 20,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
+        "image": "shopify:\/\/shop_images\/banner_dbae5302-828e-4ea7-8c0e-08a744c4e324.jpg",
+        "banner_shadow": true,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "1653650915b1ac0b93": {
+      "type": "slider",
+      "blocks": {
+        "a22797c2-b2d4-47b3-8bd9-0da6fd1f6f6e": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-4.jpg",
+            "img_title": "TAP® GROOVE CEILING  SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        },
+        "ffb45807-52cc-45a2-ae6e-986ca34cfd9b": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-6_8b18ff06-b330-43a0-b1c0-a2c68b2130aa.jpg",
+            "img_title": "TAP® INTERSECTING  CEILING SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        },
+        "0dba0f5a-c997-485f-9ae4-4a062019e811": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-1.jpg",
+            "img_title": "TAP® 3D WALL SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        },
+        "1703c732-bc26-46fc-89ac-31726f56f9d3": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-3.jpg",
+            "img_title": "TAP® GROOVE CEILING  SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        },
+        "db8b065e-730f-40d8-935e-052c5bda729b": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-2.jpg",
+            "img_title": "TAP® INTERSECTING  CEILING SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        },
+        "d80ba130-b5d2-41db-a4e7-38faa88b8316": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pillar-10.jpg",
+            "img_title": "TAP® 3D WALL SERIES",
+            "font_size": "32",
+            "head_color": "#ffffff",
+            "text_transform": "uppercase",
+            "font_weight": "600",
+            "text": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "a22797c2-b2d4-47b3-8bd9-0da6fd1f6f6e",
+        "ffb45807-52cc-45a2-ae6e-986ca34cfd9b",
+        "0dba0f5a-c997-485f-9ae4-4a062019e811",
+        "1703c732-bc26-46fc-89ac-31726f56f9d3",
+        "db8b065e-730f-40d8-935e-052c5bda729b",
+        "d80ba130-b5d2-41db-a4e7-38faa88b8316"
+      ],
+      "settings": {
+        "bg_color": "",
+        "title": "INTERESTED IN OUR PRODUCTS?",
+        "heading_size": "h1",
+        "sub_head": "",
+        "overlap_text": true,
+        "image_overlay_opacity": 50,
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "margin_left": 75,
+        "margin_right": 75
+      }
+    },
+    "1653654734753f03a9": {
+      "type": "image-background-and-text",
+      "settings": {
+        "bg_color": "#000000",
+        "bgopacity": "0.5",
+        "texture_img": "shopify:\/\/shop_images\/texture.jpg",
+        "text": "FEELING INSPIRED? WE WOULD LOVE TO WORK WITH YOU!",
+        "text_color": "#ffffff",
+        "text_transform": "uppercase",
+        "font_weight": "bold",
+        "font_size": "32",
+        "mob_font_size": "20",
+        "line_height": "30",
+        "text_alignment": "center",
+        "button_label_1": "Contact Us",
+        "button_link_1": "#",
+        "button_style_secondary_1": true,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mob_padding_top": 0,
+        "mob_padding_bottom": 0,
+        "inner_padding_top": 55,
+        "inner_padding_bottom": 55
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1653650910924336a4",
+    "1653650915b1ac0b93",
+    "1653654734753f03a9"
+  ]
+}

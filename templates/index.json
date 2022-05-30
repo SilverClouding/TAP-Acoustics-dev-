@@ -14,14 +14,19 @@
           "type": "text",
           "settings": {
             "text": "<p>We help architects sculpt sound out of space, with bespoke, acoustic solutions.<\/p>",
-            "text_style": "body"
+            "text_style": "body",
+            "line_height": "30"
           }
         },
         "16515789145c966167-2": {
           "type": "button",
           "settings": {
-            "button_label": "Know More",
-            "button_link": ""
+            "button_label_1": "Know More",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -216,14 +221,19 @@
           "type": "text",
           "settings": {
             "text": "<p>we’ve gathered a selection of soundproofing inspirations and images to spark your imagination! <\/p>",
-            "text_style": "subtitle"
+            "text_style": "subtitle",
+            "line_height": "30"
           }
         },
         "1651645955c247131e-2": {
           "type": "button",
           "settings": {
-            "button_label": "View All",
-            "button_link": "#"
+            "button_label_1": "View All",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -255,8 +265,11 @@
         "1651646081adc1d312-0": {
           "type": "column",
           "settings": {
+            "block_bg_color": "",
             "image": "shopify:\/\/shop_images\/rectangle_23.jpg",
+            "sub_title": "",
             "title": "Infrastructure",
+            "font_weight": "400",
             "font_size": "32",
             "head_color": "#ffffff",
             "text": "<p>TAP is a global market leader in <br\/>designed wood wool acoustic.<\/p>",
@@ -268,8 +281,11 @@
         "1651646081adc1d312-1": {
           "type": "column",
           "settings": {
+            "block_bg_color": "",
             "image": "shopify:\/\/shop_images\/rectangle_23_copy.png",
+            "sub_title": "",
             "title": "R&D",
+            "font_weight": "400",
             "font_size": "32",
             "head_color": "#000000",
             "text": "<p>TAP is a global market leader in <br\/>designed wood wool acoustic. <\/p>",
@@ -281,8 +297,11 @@
         "1651646081adc1d312-2": {
           "type": "column",
           "settings": {
+            "block_bg_color": "",
             "image": "shopify:\/\/shop_images\/rectangle_23_copy_2.jpg",
+            "sub_title": "",
             "title": "Case Study",
+            "font_weight": "400",
             "font_size": "32",
             "head_color": "#ffffff",
             "text": "<p>Our tools makes it easy for any <br\/>architect and interior designer<\/p>",
@@ -300,6 +319,7 @@
       "settings": {
         "full_width": true,
         "title": "",
+        "heading_color": "",
         "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -314,6 +334,8 @@
         "swipe_on_mobile": true,
         "padding_top": 30,
         "padding_bottom": 0,
+        "block_padding_top": 10,
+        "block_padding_bottom": 10,
         "margin_left": 15,
         "margin_right": 15
       }
